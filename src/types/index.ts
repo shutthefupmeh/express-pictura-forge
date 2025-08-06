@@ -81,7 +81,9 @@ export interface ApiResponse<T = any> {
   errors?: any[];
 }
 
-export interface PaginationResponse<T> extends ApiResponse<T> {
+export interface PaginationResponse<T> {
+  success: boolean;
+  message: string;
   data: {
     items: T[];
     pagination: {

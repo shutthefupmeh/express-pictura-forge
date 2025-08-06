@@ -19,7 +19,7 @@ export const generateToken = (id: string, email: string, role: string): string =
     expiresIn: jwtExpire,
     issuer: 'express-api',
     audience: 'api-users'
-  });
+  } as jwt.SignOptions);
 };
 
 export const verifyToken = (token: string): JWTPayload => {
